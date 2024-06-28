@@ -17,7 +17,7 @@ const DBSchema = new mongoose.Schema({
 });
 const DBModel = mongoose.model('student', DBSchema);
 app.use(express.json());
-app.use(cors({origin:'https://todo269.netlify.app/'}));
+app.use(cors());
 app.post('/posting', async (req, resp) => {
     try {
         const user = new DBModel(req.body);
